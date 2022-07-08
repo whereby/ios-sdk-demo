@@ -1,0 +1,7 @@
+platform :ios, '14.0'
+
+target 'WherebySDKDemo' do
+  use_frameworks!
+
+  pod 'WherebySDK'
+end

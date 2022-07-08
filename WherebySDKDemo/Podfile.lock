@@ -1,0 +1,16 @@
+PODS:
+  - WherebySDK (0.3.0)
+
+DEPENDENCIES:
+  - WherebySDK
+
+SPEC REPOS:
+  trunk:
+    - WherebySDK
+
+SPEC CHECKSUMS:
+  WherebySDK: 9c752075bc89eb48d7deaa8b98b51b96eca76562
+
+PODFILE CHECKSUM: af00ad67b4ae56e858a04a22c3a5de81925427b4
+
+COCOAPODS: 1.11.3
