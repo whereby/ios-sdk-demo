@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/whereby/ios-sdk.git",
+      "state" : {
+        "branch" : "yuriy/pcx-61-set-up-distribution-with-swift-package",
+        "revision" : "f3979487025ec8d1094e95487cef42691bdc9532"
+      }
+    }
+  ],
+  "version" : 2
+}
