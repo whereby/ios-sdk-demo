@@ -17,7 +17,7 @@ import WherebySDK
 
 // Replace with your room URL.
 // See https://docs.whereby.com/creating-and-deleting-rooms for details on how to create rooms.
-let roomUrl = URL(string: "https://team.whereby.com/ios")!
+let roomUrl = URL(string: "")!
 
 class DemoViewController: UIViewController {
 
