@@ -75,6 +75,16 @@ class DemoViewController: UIViewController {
         removeEmbeddedRoomViewController()
     }
 
+    @IBAction func toggleMicButtonPressed(_ sender: UIButton) {
+        guard let embeddedRoomViewController = embeddedRoomViewController else { return }
+        embeddedRoomViewController.isMicrophoneEnabled = !embeddedRoomViewController.isMicrophoneEnabled
+    }
+    
+    @IBAction func toggleCamButtonPressed(_ sender: UIButton) {
+        guard let embeddedRoomViewController = embeddedRoomViewController else { return }
+        embeddedRoomViewController.isCameraEnabled = !embeddedRoomViewController.isCameraEnabled
+    }
+    
     private func createRoomConfig() -> WherebyRoomConfig {
         let roomConfig = WherebyRoomConfig(url: roomUrl)
         // Optional: set configuration parameters to customize the room, for example:
