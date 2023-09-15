@@ -17,7 +17,7 @@ import WherebySDK
 
 // Replace with your room URL.
 // See https://docs.whereby.com/creating-and-deleting-rooms for details on how to create rooms.
-let roomUrl = URL(string: "")!
+let roomUrlString = ""
 
 class DemoViewController: UIViewController {
 
@@ -27,13 +27,31 @@ class DemoViewController: UIViewController {
     }
 
     private var roomPresentationMethod: RoomPresentationMethod!
-    private var embeddedRoomViewController: WherebyRoomViewController?
-    @IBOutlet weak var topButtonsStackView: UIStackView!
-
+    private var embeddedRoomViewController: WherebyRoomViewController? {
+        didSet {
+            updateActionButtonsStackView()
+        }
+    }
+    
+    @IBOutlet private weak var roomUrlTextField: UITextField! {
+        didSet {
+            roomUrlTextField.text = roomUrlString
+        }
+    }
+    
+    @IBOutlet private weak var topButtonsStackView: UIStackView!
+    @IBOutlet private weak var actionButtonStackView: UIStackView! {
+        didSet {
+            updateActionButtonsStackView()
+        }
+    }
+    
     @IBAction func embedRoomButtonPressed(_ sender: UIButton) {
         roomPresentationMethod = .embed
-
-        let roomConfig = createRoomConfig()
+        guard let roomURL = getRoomURL() else {
+            return
+        }
+        let roomConfig = createRoomConfig(roomURL: roomURL)
         let roomViewController = WherebyRoomViewController(config: roomConfig, isPushedInNavigationController: false)
         roomViewController.delegate = self
 
@@ -63,8 +81,10 @@ class DemoViewController: UIViewController {
 
     @IBAction func pushRoomButtonPressed(_ sender: UIButton) {
         roomPresentationMethod = .push
-
-        let roomConfig = createRoomConfig()
+        guard let roomURL = getRoomURL() else {
+            return
+        }
+        let roomConfig = createRoomConfig(roomURL: roomURL)
         let roomViewController = WherebyRoomViewController(config: roomConfig, isPushedInNavigationController: true)
         roomViewController.delegate = self
         navigationController!.pushViewController(roomViewController, animated: true)
@@ -85,8 +105,30 @@ class DemoViewController: UIViewController {
         embeddedRoomViewController.isCameraEnabled = !embeddedRoomViewController.isCameraEnabled
     }
     
-    private func createRoomConfig() -> WherebyRoomConfig {
-        let roomConfig = WherebyRoomConfig(url: roomUrl)
+    // MARK: View lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        roomUrlTextField.delegate = self
+    }
+    
+    // MARK: Private
+    
+    private func updateActionButtonsStackView() {
+        actionButtonStackView.isHidden = embeddedRoomViewController == nil
+    }
+    
+    private func getRoomURL() -> URL? {
+        guard let roomUrlStringInput = roomUrlTextField.text,
+              let roomURL = URL(string: roomUrlStringInput) else {
+            // Display an error
+            return nil
+        }
+        return roomURL
+    }
+    
+    private func createRoomConfig(roomURL: URL) -> WherebyRoomConfig {
+        var roomConfig = WherebyRoomConfig(url: roomURL)
         // Optional: set configuration parameters to customize the room, for example:
         // roomConfig.mediaMode = .audioOnly
         return roomConfig
@@ -99,6 +141,17 @@ class DemoViewController: UIViewController {
         embeddedRoomViewController = nil
     }
 
+}
+
+// MARK: - UITextFieldDelegate
+
+extension DemoViewController: UITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
 }
 
 // MARK: - WherebyRoomViewControllerDelegate
@@ -115,3 +168,4 @@ extension DemoViewController: WherebyRoomViewControllerDelegate {
     }
 
 }
+
