@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z96-z9-F3s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z96-z9-F3s">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <accessibilityOverrides dynamicTypePreference="3"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,17 +18,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Db8-n0-fD4">
-                                <rect key="frame" x="16" y="96" width="382" height="80"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Db8-n0-fD4">
+                                <rect key="frame" x="16" y="100" width="382" height="140"/>
                                 <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="room URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AOo-uS-jtj">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="fWk-OA-WGz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" textContentType="url"/>
+                                    </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KOH-5Y-fV9">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="21.5"/>
+                                        <rect key="frame" x="0.0" y="52" width="382" height="36"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfv-ca-Pde">
-                                                <rect key="frame" x="0.0" y="0.0" width="187" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Embed as child"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Embed room">
+                                                <buttonConfiguration key="configuration" style="gray" title="Embed room">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -36,10 +44,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQy-rO-5Pb">
-                                                <rect key="frame" x="195" y="0.0" width="187" height="21.5"/>
+                                                <rect key="frame" x="195" y="0.0" width="187" height="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Push full screen"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Push room">
+                                                <buttonConfiguration key="configuration" style="gray" title="Push room">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -47,15 +55,34 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="jzf-Ll-2yw"/>
+                                        </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LZP-I4-rQI">
-                                        <rect key="frame" x="0.0" y="29.5" width="382" height="21"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="xmL-ri-H0u">
+                                        <rect key="frame" x="0.0" y="104" width="382" height="36"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YnW-HV-vyE">
+                                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="36"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Toggle mic"/>
+                                                <connections>
+                                                    <action selector="toggleMicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Si-UT-KMe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0a6-X1-bef">
+                                                <rect key="frame" x="128.5" y="0.0" width="125" height="36"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Toggle cam"/>
+                                                <connections>
+                                                    <action selector="toggleCamButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YfM-yn-s8P"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKm-JB-rzW">
-                                                <rect key="frame" x="0.0" y="0.0" width="196" height="21"/>
+                                                <rect key="frame" x="257.5" y="0.0" width="124.5" height="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Embed as child"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Remove embedded room">
+                                                <buttonConfiguration key="configuration" style="filled" title="Remove view">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -63,32 +90,11 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tfi-CO-4zx">
-                                        <rect key="frame" x="0.0" y="58.5" width="382" height="21.5"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQh-P4-h7B">
-                                                <rect key="frame" x="0.0" y="0.0" width="187" height="21.5"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Toggle mic"/>
-                                                <connections>
-                                                    <action selector="toggleMicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7O7-EO-xc6"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbw-L5-F0B">
-                                                <rect key="frame" x="195" y="0.0" width="187" height="21.5"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Toggle cam"/>
-                                                <connections>
-                                                    <action selector="toggleCamButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BxH-EC-ZNM"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="NCo-4X-oXq"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="oEI-mg-Zdq"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -99,8 +105,12 @@
                             <constraint firstItem="Db8-n0-fD4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ojC-bo-f60"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Whereby SDK Demo" id="Ji3-Tt-Mp4"/>
+                    <navigationItem key="navigationItem" title="Whereby SDK Demo" id="Ji3-Tt-Mp4">
+                        <barButtonItem key="backBarButtonItem" title=" " id="UYK-4o-VDO"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="actionButtonStackView" destination="xmL-ri-H0u" id="r6A-Mr-9I9"/>
+                        <outlet property="roomUrlTextField" destination="AOo-uS-jtj" id="pEP-1A-X5b"/>
                         <outlet property="topButtonsStackView" destination="Db8-n0-fD4" id="Scc-ef-Vv3"/>
                     </connections>
                 </viewController>
@@ -114,7 +124,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z96-z9-F3s" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eCp-Ib-lKA">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -133,3 +143,4 @@
         </systemColor>
     </resources>
 </document>
+
