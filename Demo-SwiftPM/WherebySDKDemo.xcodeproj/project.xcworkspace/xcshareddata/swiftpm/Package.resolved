@@ -1,14 +1,15 @@
 {
+  "originHash" : "a7a7f8c5fb1976a39bb0add4f9499dd6c294e0fcd2760993b435d824250d19c8",
   "pins" : [
     {
       "identity" : "ios-sdk",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/whereby/ios-sdk.git",
       "state" : {
-        "revision" : "ca41f2239a1dcc600e136d44a4e322e3b3449059",
-        "version" : "0.9.0"
+        "revision" : "b813b0b4595b5820bcc80ecf491755c5ab0b6bde",
+        "version" : "0.12.0"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
