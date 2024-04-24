@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/whereby/ios-sdk.git",
       "state" : {
-        "revision" : "b813b0b4595b5820bcc80ecf491755c5ab0b6bde",
-        "version" : "0.12.0"
+        "revision" : "da1003f765ad831aa812e6c9e99d68d2b9a343f2",
+        "version" : "0.13.0"
       }
     }
   ],
