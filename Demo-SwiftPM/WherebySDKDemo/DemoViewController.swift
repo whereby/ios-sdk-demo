@@ -46,6 +46,11 @@ class DemoViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var microphoneButton: UIButton!
+    
+    @IBOutlet weak var cameraButton: UIButton!
+    
+    
     @IBAction func embedRoomButtonPressed(_ sender: UIButton) {
         roomPresentationMethod = .embed
         guard let roomURL = getRoomURL() else {
@@ -77,6 +82,16 @@ class DemoViewController: UIViewController {
 
         roomViewController.join()
         embeddedRoomViewController = roomViewController
+        
+        // Show/hide UI elements
+        embeddedRoomViewController?.setRoomInfoIsHidden(true)
+        embeddedRoomViewController?.setMoreButtonIsHidden(true)
+        embeddedRoomViewController?.setSettingsButtonIsHidden(true)
+        embeddedRoomViewController?.setRoomControlBarIsHidden(true)
+        
+        // Set room background color
+        embeddedRoomViewController?.view.backgroundColor = .clear
+        embeddedRoomViewController?.setRoomBackgroundColor(.clear)
     }
 
     @IBAction func pushRoomButtonPressed(_ sender: UIButton) {
@@ -92,6 +107,10 @@ class DemoViewController: UIViewController {
     }
 
     @IBAction func removeEmbeddedRoomButtonPressed(_ sender: UIButton) {
+        guard let embeddedRoomViewController = embeddedRoomViewController else {
+            return
+        }
+        embeddedRoomViewController.leaveRoom()
         removeEmbeddedRoomViewController()
     }
 
@@ -118,6 +137,14 @@ class DemoViewController: UIViewController {
         actionButtonStackView.isHidden = embeddedRoomViewController == nil
     }
     
+    private func updateMicrophoneButtonTintColor(isMicrophoneEnabled: Bool) {
+        microphoneButton.tintColor = isMicrophoneEnabled ? .green : .red
+    }
+    
+    private func updateCameraButtonTintColor(isCameraEnabled: Bool) {
+        cameraButton.tintColor = isCameraEnabled ? .green : .red
+    }
+    
     private func getRoomURL() -> URL? {
         guard let roomUrlStringInput = roomUrlTextField.text,
               let roomURL = URL(string: roomUrlStringInput) else {
@@ -131,6 +158,7 @@ class DemoViewController: UIViewController {
         var roomConfig = WherebyRoomConfig(url: roomURL)
         // Optional: set configuration parameters to customize the room, for example:
         // roomConfig.mediaMode = .audioOnly
+        roomConfig.skipRoomPushAnimation = true
         return roomConfig
     }
 
@@ -157,6 +185,20 @@ extension DemoViewController: UITextFieldDelegate {
 // MARK: - WherebyRoomViewControllerDelegate
 
 extension DemoViewController: WherebyRoomViewControllerDelegate {
+    
+    func roomViewControllerDidJoinRoom(_ roomViewController: WherebySDK.WherebyRoomViewController) {
+        updateMicrophoneButtonTintColor(isMicrophoneEnabled: roomViewController.isMicrophoneEnabled)
+        updateCameraButtonTintColor(isCameraEnabled: roomViewController.isCameraEnabled)
+    }
+    
+    func roomViewControllerDidUpdateMicrophoneEnabled(_ roomViewController: WherebySDK.WherebyRoomViewController, isMicrophoneEnabled: Bool) {
+        updateMicrophoneButtonTintColor(isMicrophoneEnabled: isMicrophoneEnabled)
+    }
+    
+    func roomViewControllerDidUpdateCameraEnabled(_ roomViewController: WherebySDK.WherebyRoomViewController, isCameraEnabled: Bool) {
+        updateCameraButtonTintColor(isCameraEnabled: isCameraEnabled)
+    }
+    
 
     func roomViewControllerDidLeave(_ roomViewController: WherebyRoomViewController) {
         switch roomPresentationMethod! {

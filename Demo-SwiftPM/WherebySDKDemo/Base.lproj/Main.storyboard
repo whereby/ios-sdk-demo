@@ -65,7 +65,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YnW-HV-vyE">
                                                 <rect key="frame" x="0.0" y="0.0" width="124.5" height="36"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Toggle mic"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Mic"/>
                                                 <connections>
                                                     <action selector="toggleMicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Si-UT-KMe"/>
                                                 </connections>
@@ -73,7 +73,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0a6-X1-bef">
                                                 <rect key="frame" x="128.5" y="0.0" width="125" height="36"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Toggle cam"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Cam"/>
                                                 <connections>
                                                     <action selector="toggleCamButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YfM-yn-s8P"/>
                                                 </connections>
@@ -98,7 +98,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Db8-n0-fD4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Ku3-Nm-1qZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Db8-n0-fD4" secondAttribute="trailing" constant="16" id="NoG-1u-7oD"/>
@@ -110,6 +110,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="actionButtonStackView" destination="xmL-ri-H0u" id="r6A-Mr-9I9"/>
+                        <outlet property="cameraButton" destination="0a6-X1-bef" id="9GN-UI-cIX"/>
+                        <outlet property="microphoneButton" destination="YnW-HV-vyE" id="BzF-nc-We7"/>
                         <outlet property="roomUrlTextField" destination="AOo-uS-jtj" id="pEP-1A-X5b"/>
                         <outlet property="topButtonsStackView" destination="Db8-n0-fD4" id="Scc-ef-Vv3"/>
                     </connections>
@@ -138,9 +140,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
-
