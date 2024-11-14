@@ -302,6 +302,7 @@
 				INFOPLIST_FILE = WherebySDKDemo/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow camera access so that other people can see you during meetings.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Allow microphone access so that other people can hear you during meetings.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow access to photo library to save and manage images and videos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -333,6 +334,7 @@
 				INFOPLIST_FILE = WherebySDKDemo/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow camera access so that other people can see you during meetings.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Allow microphone access so that other people can hear you during meetings.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow access to photo library to save and manage images and videos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
