@@ -84,10 +84,10 @@ class DemoViewController: UIViewController {
         embeddedRoomViewController = roomViewController
         
         // Show/hide UI elements
-        embeddedRoomViewController?.setRoomInfoIsHidden(true)
-        embeddedRoomViewController?.setMoreButtonIsHidden(true)
-        embeddedRoomViewController?.setSettingsButtonIsHidden(true)
-        embeddedRoomViewController?.setRoomControlBarIsHidden(true)
+//        embeddedRoomViewController?.setRoomInfoIsHidden(true)
+//        embeddedRoomViewController?.setMoreButtonIsHidden(true)
+//        embeddedRoomViewController?.setSettingsButtonIsHidden(true)
+//        embeddedRoomViewController?.setRoomControlBarIsHidden(true)
         
         // Set room background color
         embeddedRoomViewController?.view.backgroundColor = .clear
