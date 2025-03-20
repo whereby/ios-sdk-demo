@@ -1,11 +1,17 @@
 # Whereby iOS SDK demo
 
+## Overview
+
 This repository contains a sample app in Swift using the [Whereby iOS SDK](https://github.com/whereby/ios-sdk).
 
 Other platforms:
 
 - [Android SDK](https://github.com/whereby/android-sdk)
-- [Browser SDK](https://github.com/whereby/browser-sdk)
+- [Browser SDK](https://github.com/whereby/sdk)
+
+| Screen 1 | Screen 2 | Screen 3 |
+|-------------|-------------|-------------|
+| <img src="Screenshots/Screen1.png" alt="Screen1" width="200"/> | <img src="Screenshots/Screen2.png" alt="Screen2" width="200"/> | <img src="Screenshots/Screen3.png" alt="Screen2" width="200"/> |
 
 ## Prerequisites
 
