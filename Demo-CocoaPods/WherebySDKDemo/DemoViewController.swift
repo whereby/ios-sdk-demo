@@ -159,6 +159,8 @@ class DemoViewController: UIViewController {
         // Optional: set configuration parameters to customize the room, for example:
         // roomConfig.mediaMode = .audioOnly
         roomConfig.skipRoomPushAnimation = true
+        roomConfig.isLockingSettingsGloballyHidden = false
+        roomConfig.userDisplayName = "Name"
         return roomConfig
     }
 
