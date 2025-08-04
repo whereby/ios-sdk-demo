@@ -1,5 +1,5 @@
 PODS:
-  - WherebySDK (0.17.0)
+  - WherebySDK (0.18.0)
 
 DEPENDENCIES:
   - WherebySDK
@@ -9,7 +9,7 @@ SPEC REPOS:
     - WherebySDK
 
 SPEC CHECKSUMS:
-  WherebySDK: 5b2fce4c4410c095ee2b97e02f1a1ed917ed008a
+  WherebySDK: 7b17abcbd141cafc2e5fb2dc4160b09562d44473
 
 PODFILE CHECKSUM: af00ad67b4ae56e858a04a22c3a5de81925427b4
 
