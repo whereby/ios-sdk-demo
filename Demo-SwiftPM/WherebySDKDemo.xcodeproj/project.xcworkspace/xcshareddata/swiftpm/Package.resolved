@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/whereby/ios-sdk.git",
       "state" : {
-        "revision" : "25a9520d2c759456bd9615221740e2ca10b28018",
-        "version" : "1.0.2"
+        "branch" : "remiquinto/pan-2882-ios-sdk-investigate-lost-knock-when-guest-app-is-sent-to",
+        "revision" : "ae31a3e51703fdc6b8396db6daa1c718e18da34a"
       }
     }
   ],

@@ -57,6 +57,10 @@ class DemoViewController: UIViewController {
             return
         }
         let roomConfig = createRoomConfig(roomURL: roomURL)
+        
+//        WherebyAppearance.shared.colorBundle = .main
+//        WherebyAppearance.shared.setColorOverrides([.accentPrimaryDefault: .blue])
+        
         let roomViewController = WherebyRoomViewController(config: roomConfig, isPushedInNavigationController: false)
         roomViewController.delegate = self
 

@@ -297,7 +297,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZFHDR68XHM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WherebySDKDemo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Whereby - SDK Demo";
@@ -315,7 +315,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.whereby.sdk-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.whereby.sdk-demo-remi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -330,7 +330,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZFHDR68XHM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WherebySDKDemo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Whereby - SDK Demo";
@@ -348,7 +348,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.whereby.sdk-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.whereby.sdk-demo-remi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -384,8 +384,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/whereby/ios-sdk.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				branch = "remiquinto/pan-2882-ios-sdk-investigate-lost-knock-when-guest-app-is-sent-to";
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
